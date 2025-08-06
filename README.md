@@ -37,9 +37,18 @@ options:
 
 #### Run validation only
 
-This option, lets you validate the entered tasks list file. It will also calculate
+This option lets you validate the entered tasks list file. It will also calculate
 the estimate duration for a serial run. Concurrency/Parallel will be covered later. 
 
 ```
 python basic_scheduler --input  tasks.txt --validate
+```
+
+#### Run scheduler
+
+This option will run all tasks and calculate the logical path to complete all tasks. At the end, it 
+compares the actual duration against the expected duration and print it
+
+```
+python basic_scheduler --input  tasks.txt --run
 ```
