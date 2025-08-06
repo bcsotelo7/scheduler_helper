@@ -7,7 +7,7 @@ import ast
 
 def parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-i","--input", help="Specify input file (tasks)", required=True)
+    parser.add_argument("-i", "--input", help="Specify input file (tasks)", required=True)
     parser.add_argument("--validate", help="Validate file only", required=False, action="store_true")
     parser.add_argument("--run", help="Run the tasks", required=False, action="store_true")
     return parser.parse_args()
@@ -57,14 +57,14 @@ def main():
     task_hash_map = {i["name"]: i for i in tasks_list} # for now redundant
     print(task_hash_map)
     expected_duration = serial_mode(tasks_list)
-    print(f"Estimated total runtime (no dependencies considered): {expected_duration} seconds")
+    print(f"Expected total runtime (no dependencies considered): {expected_duration} seconds")
     if args.validate:
         sys.exit(0)
     if args.run:
         # Run the task scheduler
         actual_duration = run(task_hash_map)
     delta_duration_exact = actual_duration - expected_duration
-    delta_duration = round(delta_duration_exact,3)
+    delta_duration = round(delta_duration_exact, 3)
     print(f"The difference from actual runtime to expected runtime is {delta_duration}")
 
 
