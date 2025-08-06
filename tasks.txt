@@ -1,3 +1,5 @@
 task_a, 2, []
-task_b, 3, []
-task_c, 1, []
+task_b, 5, ['task_a']
+task_c, 10, ['task_a']
+task_d, 5, ['task_a']
+task_e, 10, ['task_a']
