@@ -52,3 +52,12 @@ compares the actual duration against the expected duration and print it
 ```
 python basic_scheduler --input  tasks.txt --run
 ```
+
+## Future work
+
+The next steps in further improving this scheduler is to:
+
+- Add task file validator for actual syntax checks (e.g. names of dependencies) on the text file. 
+- Extend from serial independent to serial dependent capabilities; this would require knowledge of graph algorithm and leverage the hash map created
+- Extend to concurrent and parallel features of this scheduler. This would be a little difficult with python standard libraries but I think it's possible.
+For my own benefit, I would look into that as well as non-standard python packages that automate a lot of this.
